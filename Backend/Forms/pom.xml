@@ -47,6 +47,24 @@
             <artifactId>freemarker</artifactId>
             <version>2.3.31</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-xjc -->
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-xjc</artifactId>
+            <version>4.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
+        <!-- JAXB Implementáció -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>4.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -71,6 +89,28 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>-->
+            <plugin>
+                <groupId>org.jvnet.jax-ws-commons</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <version>2.3</version>
+                <executions>
+                    <execution>
+                        <id>generate</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <schemaDirectory>src/main/resources</schemaDirectory>
+                    <schemas>
+                        <schema>
+                            <file>MODULE1_fmb.xsd</file>
+                        </schema>
+                    </schemas>
+                    <packageName>com.test.forms.Modell</packageName>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>

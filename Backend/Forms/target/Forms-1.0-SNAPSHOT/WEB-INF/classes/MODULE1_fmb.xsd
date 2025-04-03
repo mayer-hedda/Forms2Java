@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="http://xmlns.oracle.com/Forms" xmlns:mstns="http://xmlns.oracle.com/Forms" xmlns="http://xmlns.oracle.com/Forms" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="Module">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FormModule" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Coordinate" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="CharacterCellWidth" form="unqualified" type="xs:string" />
+                  <xs:attribute name="RealUnit" form="unqualified" type="xs:string" />
+                  <xs:attribute name="DefaultFontScaling" form="unqualified" type="xs:string" />
+                  <xs:attribute name="CharacterCellHeight" form="unqualified" type="xs:string" />
+                  <xs:attribute name="CoordinateSystem" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Block" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Item" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="Name" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Prompt" form="unqualified" type="xs:string" />
+                        <xs:attribute name="TabPageName" form="unqualified" type="xs:string" />
+                        <xs:attribute name="PromptAttachmentOffset" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DistanceBetweenRecords" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Width" form="unqualified" type="xs:string" />
+                        <xs:attribute name="MaximumLength" form="unqualified" type="xs:string" />
+                        <xs:attribute name="ItemType" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DataType" form="unqualified" type="xs:string" />
+                        <xs:attribute name="XPosition" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Required" form="unqualified" type="xs:string" />
+                        <xs:attribute name="YPosition" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DirtyInfo" form="unqualified" type="xs:string" />
+                        <xs:attribute name="CanvasName" form="unqualified" type="xs:string" />
+                        <xs:attribute name="ColumnName" form="unqualified" type="xs:string" />
+                        <xs:attribute name="PromptDisplayStyle" form="unqualified" type="xs:string" />
+                        <xs:attribute name="ItemsDisplay" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Height" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DataLengthSemantics" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DataSourceColumn" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="DSCLength" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DSCMandatory" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DSCPrecision" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DSCName" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DSCScale" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DSCType" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DSCNochildren" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Type" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Name" form="unqualified" type="xs:string" />
+                  <xs:attribute name="QueryDataSourceName" form="unqualified" type="xs:string" />
+                  <xs:attribute name="DirtyInfo" form="unqualified" type="xs:string" />
+                  <xs:attribute name="ScrollbarWidth" form="unqualified" type="xs:string" />
+                  <xs:attribute name="ScrollbarLength" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Canvas" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Graphics" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="Name" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Width" form="unqualified" type="xs:string" />
+                        <xs:attribute name="EdgeBackColor" form="unqualified" type="xs:string" />
+                        <xs:attribute name="FillPattern" form="unqualified" type="xs:string" />
+                        <xs:attribute name="EdgePattern" form="unqualified" type="xs:string" />
+                        <xs:attribute name="FrameTitleOffset" form="unqualified" type="xs:string" />
+                        <xs:attribute name="XPosition" form="unqualified" type="xs:string" />
+                        <xs:attribute name="FrameTitleSpacing" form="unqualified" type="xs:string" />
+                        <xs:attribute name="YPosition" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Bevel" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DirtyInfo" form="unqualified" type="xs:string" />
+                        <xs:attribute name="LayoutDataBlockName" form="unqualified" type="xs:string" />
+                        <xs:attribute name="GraphicsType" form="unqualified" type="xs:string" />
+                        <xs:attribute name="HorizontalMargin" form="unqualified" type="xs:string" />
+                        <xs:attribute name="ScrollbarWidth" form="unqualified" type="xs:string" />
+                        <xs:attribute name="VerticalMargin" form="unqualified" type="xs:string" />
+                        <xs:attribute name="HorizontalObjectOffset" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Height" form="unqualified" type="xs:string" />
+                        <xs:attribute name="StartPromptOffset" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Name" form="unqualified" type="xs:string" />
+                  <xs:attribute name="CanvasType" form="unqualified" type="xs:string" />
+                  <xs:attribute name="DirtyInfo" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Width" form="unqualified" type="xs:string" />
+                  <xs:attribute name="WindowName" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Height" form="unqualified" type="xs:string" />
+                  <xs:attribute name="ViewportHeight" form="unqualified" type="xs:string" />
+                  <xs:attribute name="ViewportWidth" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Window" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Name" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Width" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Height" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Name" form="unqualified" type="xs:string" />
+            <xs:attribute name="DirtyInfo" form="unqualified" type="xs:string" />
+            <xs:attribute name="Title" form="unqualified" type="xs:string" />
+            <xs:attribute name="ConsoleWindow" form="unqualified" type="xs:string" />
+            <xs:attribute name="MenuModule" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Module" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
