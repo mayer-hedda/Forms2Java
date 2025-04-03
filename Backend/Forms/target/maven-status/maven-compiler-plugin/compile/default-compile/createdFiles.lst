@@ -1,0 +1,5 @@
+com\test\forms\Service\JdapiInitializer.class
+com\test\forms\Controller\ApplicationConfig.class
+com\test\forms\Service\Forms2XmlConverter.class
+com\test\forms\Controller\FirstController.class
+com\test\forms\Service\XMLUtils.class

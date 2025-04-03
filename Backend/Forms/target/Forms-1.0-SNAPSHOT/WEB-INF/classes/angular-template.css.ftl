@@ -1,0 +1,43 @@
+.form-container {
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+fieldset {
+    border: 2px solid #000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 5px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    display: block;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+<#list blocks as block>
+/* Stílus a ${block.name} blokkhoz */
+.${block.name}-frame {
+    border: 2px inset #000;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+}
+</#list>
