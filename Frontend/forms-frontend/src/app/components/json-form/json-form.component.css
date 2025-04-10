@@ -1,0 +1,60 @@
+/* json-form.component.css */
+.block {
+  display: flex;
+  flex-direction: column; /* Elemek egymás alatt */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc; /* Vizuális elválasztás a blokkok között */
+  box-sizing: border-box;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* Adjust spacing as needed */
+  box-sizing: border-box;
+}
+
+
+/* Input mezők */
+input[type="text"], select, .push-button {
+  width: 100%; /* Teljes szélesség */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+/* Checkbox */
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Radio Group style */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-group label {
+  margin-bottom: 5px;
+}
+
+/* Push button style */
+.push-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+label {
+  font-size: 14px;
+}

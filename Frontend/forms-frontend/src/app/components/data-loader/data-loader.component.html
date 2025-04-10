@@ -1,0 +1,17 @@
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+<div *ngIf="isLoading" class="loading">Betöltés...</div>
+
+<div *ngIf="!isLoading && !errorMessage && jsonFiles.length > 0">
+  <ul>
+    <li *ngFor="let file of jsonFiles">
+      <button (click)="loadJsonFile(file)">{{ file }}</button>
+    </li>
+  </ul>
+</div>
+
+<app-json-form *ngIf="selectedJsonData" [jsonData]="selectedJsonData"></app-json-form>
+
+<div *ngIf="!isLoading && !errorMessage && jsonFiles.length === 0">
+  Nincsenek fájlok.
+</div>

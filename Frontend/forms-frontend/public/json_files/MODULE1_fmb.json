@@ -1,0 +1,117 @@
+{
+  "version" : "122010400",
+  "FormModule" : {
+    "Name" : "MODULE1",
+    "DirtyInfo" : "true",
+    "Title" : "MODULE1",
+    "ConsoleWindow" : "WINDOW1",
+    "MenuModule" : "DEFAULT&SMARTBAR",
+    "Coordinate" : {
+      "CharacterCellWidth" : "9",
+      "RealUnit" : "Point",
+      "DefaultFontScaling" : "true",
+      "CharacterCellHeight" : "16",
+      "CoordinateSystem" : "Real"
+    },
+    "Block" : {
+      "Name" : "TEST_TABLE",
+      "QueryDataSourceName" : "TEST_USER.TEST_TABLE",
+      "DirtyInfo" : "true",
+      "ScrollbarWidth" : "18",
+      "ScrollbarLength" : "158",
+      "Item" : [ {
+        "Name" : "ID",
+        "Prompt" : "Id",
+        "TabPageName" : "",
+        "PromptAttachmentOffset" : "9",
+        "DistanceBetweenRecords" : "16",
+        "Width" : "99",
+        "MaximumLength" : "40",
+        "ItemType" : "Text Item",
+        "DataType" : "Number",
+        "XPosition" : "51",
+        "Required" : "true",
+        "YPosition" : "33",
+        "DirtyInfo" : "true",
+        "CanvasName" : "CANVAS2",
+        "ColumnName" : "ID",
+        "PromptDisplayStyle" : "All Records",
+        "ItemsDisplay" : "0",
+        "Height" : "16"
+      }, {
+        "Name" : "NAME",
+        "Prompt" : "Name",
+        "TabPageName" : "",
+        "PromptAttachmentOffset" : "9",
+        "DistanceBetweenRecords" : "16",
+        "Width" : "459",
+        "MaximumLength" : "50",
+        "ItemType" : "Text Item",
+        "XPosition" : "51",
+        "YPosition" : "49",
+        "DirtyInfo" : "true",
+        "CanvasName" : "CANVAS2",
+        "ColumnName" : "NAME",
+        "PromptDisplayStyle" : "All Records",
+        "DataLengthSemantics" : "BYTE",
+        "ItemsDisplay" : "0",
+        "Height" : "16"
+      } ],
+      "DataSourceColumn" : [ {
+        "DSCLength" : "0",
+        "DSCMandatory" : "true",
+        "DSCPrecision" : "0",
+        "DSCName" : "ID",
+        "DSCScale" : "-127",
+        "DSCType" : "NUMBER",
+        "DSCNochildren" : "false",
+        "Type" : "Query"
+      }, {
+        "DSCLength" : "50",
+        "DSCMandatory" : "false",
+        "DSCPrecision" : "0",
+        "DSCName" : "NAME",
+        "DSCScale" : "0",
+        "DSCType" : "VARCHAR2",
+        "DSCNochildren" : "false",
+        "Type" : "Query"
+      } ]
+    },
+    "Canvas" : {
+      "Name" : "CANVAS2",
+      "CanvasType" : "Content",
+      "DirtyInfo" : "true",
+      "Width" : "720",
+      "WindowName" : "WINDOW1",
+      "Height" : "378",
+      "ViewportHeight" : "378",
+      "ViewportWidth" : "720",
+      "Graphics" : {
+        "Name" : "FRAME3",
+        "Width" : "510",
+        "EdgeBackColor" : "white",
+        "FillPattern" : "none",
+        "EdgePattern" : "solid",
+        "FrameTitleOffset" : "18",
+        "XPosition" : "9",
+        "FrameTitleSpacing" : "9",
+        "YPosition" : "17",
+        "Bevel" : "Inset",
+        "DirtyInfo" : "true",
+        "LayoutDataBlockName" : "TEST_TABLE",
+        "GraphicsType" : "Frame",
+        "HorizontalMargin" : "9",
+        "ScrollbarWidth" : "18",
+        "VerticalMargin" : "16",
+        "HorizontalObjectOffset" : "18",
+        "Height" : "64",
+        "StartPromptOffset" : "9"
+      }
+    },
+    "Window" : {
+      "Name" : "WINDOW1",
+      "Width" : "720",
+      "Height" : "378"
+    }
+  }
+}

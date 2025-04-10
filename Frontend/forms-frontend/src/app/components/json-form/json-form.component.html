@@ -1,0 +1,46 @@
+<div *ngFor="let block of getBlocks(jsonData)"
+     [style.background-color]="block.BackColor"
+     [style.color]="block.ForegroundColor"
+     [style.font-family]="block.FontName"
+     [style.font-size.px]="block.FontSize"
+     [style.font-style]="block.FontStyle"
+     [style.font-weight]="block.FontWeight"
+     [style.letter-spacing]="block.FontSpacing"
+     class="block">
+  <h3>{{ block.Name }}</h3>
+  <div *ngFor="let item of getItems(block)" class="item"
+       [style.background-color]="item.BackColor"
+       [style.color]="item.ForegroundColor"
+       [style.font-family]="item.FontName"
+       [style.font-size.px]="item.FontSize"
+       [style.font-style]="item.FontStyle"
+       [style.font-weight]="item.FontWeight"
+       [style.letter-spacing]="item.FontSpacing">
+    <label>{{ item.Label || item.Prompt }}</label>
+
+
+    <input *ngIf="item.ItemType === 'Text Box' || item.ItemType === 'Text Item'" type="text" [(ngModel)]="item.Value">
+
+    <input *ngIf="item.ItemType === 'Check Box'" type="checkbox" [(ngModel)]="item.Value">
+
+    <div *ngIf="item.ItemType === 'Radio Group'" class="radio-group">
+      <label *ngFor="let radio of item.RadioButton">
+        <input type="radio" [value]="radio.Name" [(ngModel)]="item.Value">
+        {{ radio.Label }}
+      </label>
+    </div>
+
+    <select *ngIf="item.ItemType === 'List Item'" [(ngModel)]="item.Value">
+      <option *ngFor="let element of item.ListItemElement" [value]="element.Name">
+        {{ element.Name }}
+      </option>
+    </select>
+
+
+    <button *ngIf="item.ItemType === 'Push Button'" class="push-button">{{ item.Label }}</button>
+
+
+
+  </div>
+
+</div>
