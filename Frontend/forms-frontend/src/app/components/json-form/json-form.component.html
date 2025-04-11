@@ -1,3 +1,9 @@
+<!-- Trigger kezelő komponens -->
+<app-trigger-handler 
+  [triggers]="triggers" 
+  [formData]="displayData">
+</app-trigger-handler>
+
 <div *ngFor="let block of getBlocks(jsonData)"
      [style.background-color]="block.BackColor"
      [style.color]="block.ForegroundColor"
@@ -16,31 +22,39 @@
        [style.font-style]="item.FontStyle"
        [style.font-weight]="item.FontWeight"
        [style.letter-spacing]="item.FontSpacing">
-    <label>{{ item.Label || item.Prompt }}</label>
+    <label *ngIf="item.ItemType !== 'Push Button' && item.ItemType !== 'Text Box' && item.ItemType !== 'Text Item'">{{ item.Label || item.Prompt }}</label>
 
+    <input *ngIf="item.ItemType === 'Text Box' || item.ItemType === 'Text Item'" 
+           type="text" 
+           [(ngModel)]="item.Value"
+           [placeholder]="item.Label || item.Prompt"
+           (ngModelChange)="onItemChange(item)">
 
-    <input *ngIf="item.ItemType === 'Text Box' || item.ItemType === 'Text Item'" type="text" [(ngModel)]="item.Value">
-
-    <input *ngIf="item.ItemType === 'Check Box'" type="checkbox" [(ngModel)]="item.Value">
+    <input *ngIf="item.ItemType === 'Check Box'" 
+           type="checkbox" 
+           [(ngModel)]="item.Value"
+           (ngModelChange)="onItemChange(item)">
 
     <div *ngIf="item.ItemType === 'Radio Group'" class="radio-group">
       <label *ngFor="let radio of item.RadioButton">
-        <input type="radio" [value]="radio.Name" [(ngModel)]="item.Value">
+        <input type="radio" 
+               [value]="radio.Name" 
+               [(ngModel)]="item.Value"
+               (ngModelChange)="onItemChange(item)">
         {{ radio.Label }}
       </label>
     </div>
 
-    <select *ngIf="item.ItemType === 'List Item'" [(ngModel)]="item.Value">
+    <select *ngIf="item.ItemType === 'List Item'" 
+            [(ngModel)]="item.Value"
+            (ngModelChange)="onItemChange(item)">
       <option *ngFor="let element of item.ListItemElement" [value]="element.Name">
         {{ element.Name }}
       </option>
     </select>
 
-
-    <button *ngIf="item.ItemType === 'Push Button'" class="push-button">{{ item.Label }}</button>
-
-
-
+    <button *ngIf="item.ItemType === 'Push Button'" 
+            class="push-button"
+            (click)="onButtonPress(item)">{{ item.Label }}</button>
   </div>
-
 </div>

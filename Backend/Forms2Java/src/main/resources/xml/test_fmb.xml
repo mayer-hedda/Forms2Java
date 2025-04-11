@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Module version="141020000" xmlns="http://xmlns.oracle.com/Forms">
+   <FormModule Name="TEST" DirtyInfo="true" Title="Oracle Fusion Middleware Forms Services">
+      <Coordinate CharacterCellWidth="5" RealUnit="Point" DefaultFontScaling="false" CharacterCellHeight="14" CoordinateSystem="Real"/>
+      <Block Name="TEST" DirtyInfo="true">
+         <Item Name="OK" Width="76" CursorStyle="hand" ItemType="Push Button" RolloverSwap="true" XPosition="377" FontName="Arial" YPosition="213" FontSize="1000" AccessKey="x" DirtyInfo="true" FontWeight="Bold" Label="Exit" DefaultButton="true" ForegroundColor="white" CanvasName="CANVAS1" Height="23">
+            <Trigger Name="WHEN-BUTTON-PRESSED" DirtyInfo="true" TriggerText="exit_form;"/>
+         </Item>
+         <Item Name="VERSION" Width="158" MaximumLength="30" ItemType="Display Item" XPosition="11" FontName="Arial" YPosition="219" DatabaseItem="false" Bevel="None" FontSize="1000" DirtyInfo="true" FontWeight="Bold" ForegroundColor="gray80" CanvasName="CANVAS1" Height="13"/>
+      </Block>
+      <Canvas Name="CANVAS1" ViewportXPositionOnCanvas="0" Bevel="None" DirtyInfo="true" Width="467" GradientStart="Bottom" WindowName="WINDOW1" Height="250" ViewportHeight="331" ViewportWidth="388">
+         <Graphics Name="TEXT73" Width="103" FillPattern="none" EdgePattern="none" JoinStyle="Bevel" BackColor="gray4" XPosition="233" YPosition="219" Bevel="None" HorizontalOrigin="Center" HorizontalJustification="Center" GraphicsFontWeight="Bold" GraphicsFontSpacing="Normal" GraphicsType="Text" ScrollbarWidth="12" Height="12" GraphicsFontName="Arial" GraphicsFontSize="1000" GraphicsFontStyle="0" GraphicsText="Successfully installed" DirtyInfo="true" GraphicsFontColor="black" GraphicsFontColorCode="0" HorizontalMargin="6" VerticalMargin="17" HorizontalObjectOffset="12" StartPromptOffset="6">
+            <CompoundText Name="CMPTXT74">
+               <TextSegment Name="TEXTSTR75" FontName="Arial" FontSize="1000" FontStyle="Plain" DirtyInfo="true" FontWeight="Bold" FontSpacing="Normal" ForegroundColor="black" Text="Successfully installed"/>
+            </CompoundText>
+         </Graphics>
+      </Canvas>
+      <Trigger Name="ON-LOGON" DirtyInfo="true" TriggerText="null;"/>
+      <Trigger Name="WHEN-NEW-FORM-INSTANCE" DirtyInfo="true" TriggerText="DECLARE&amp;#10;   frmVersion  varchar2(15);&amp;#10;BEGIN&amp;#10;   frmVersion := GET_APPLICATION_PROPERTY(VERSION);&amp;#10;   SET_WINDOW_PROPERTY(FORMS_MDI_WINDOW, WINDOW_CENTERED, PROPERTY_TRUE);&amp;#10;   SET_WINDOW_PROPERTY('WINDOW1', TITLE, 'Welcome to Oracle Fusion Middleware Forms Services ' || frmVersion);&amp;#10;   SET_WINDOW_PROPERTY(FORMS_MDI_WINDOW, ICON_NAME, 'oracle/forms/icons/frame.png');&amp;#10;&amp;#10;   SET_CANVAS_PROPERTY('CANVAS1', BACKGROUND_COLOR, 'r241,g241,b241');&amp;#10;   SET_CANVAS_PROPERTY('CANVAS1', BACKGROUND_IMAGE_ALWAYS_FILLS, PROPERTY_FALSE);&amp;#10;   SET_CANVAS_PROPERTY('CANVAS1', BACKGROUND_IMAGE, 'URL:oracle/forms/icons/splash.png');&amp;#10;&amp;#10;   SET_ITEM_PROPERTY('TEST.VERSION', BACKGROUND_COLOR, 'r241g241b241');&amp;#10;   SET_ITEM_PROPERTY('TEST.OK', BACKGROUND_COLOR, 'r45g132b197');&amp;#10;&amp;#10;   :TEST.VERSION := 'Version: ' || frmVersion;&amp;#10;&amp;#10;   SET_ITEM_PROPERTY('TEST.VERSION', TOOLTIP_TEXT, ' ' || :TEST.VERSION || ' ');&amp;#10;   SET_ITEM_PROPERTY('TEST.VERSION', TOOLTIP_BACKGROUND_COLOR, 'OLAFVeryLight');&amp;#10;END;"/>
+      <Trigger Name="WHEN-WINDOW-CLOSED" DirtyInfo="true" TriggerText="EXIT_FORM;"/>
+      <Window Name="WINDOW1" ClearAllowed="true" Bevel="None" MaximizeAllowed="false" DirtyInfo="true" MinimizeAllowed="false" Title="Welcome to Oracle Fusion Middleware Forms Services" Width="467" Centered="true" Height="250" ResizeAllowed="false" ShowTitlebar="false"/>
+   </FormModule>
+</Module>

@@ -57,7 +57,7 @@ public class XmlController {
         try {
             // Összes XML fájl lekérése
             List<String> xmlFiles = xmlService.getAllXmlFileNames();
-            String destinationFolderPath = "C:/Users/Mayer Hedda/Documents/OraForms/Forms2Java/Frontend/forms-frontend/public/json_files/";
+            String destinationFolderPath = "H:\\Forms2Java\\Frontend\\forms-frontend\\public\\json_files";
 
             ObjectMapper xmlMapper = new XmlMapper();
             ObjectMapper jsonMapper = new ObjectMapper();
@@ -86,7 +86,7 @@ public class XmlController {
     @GetMapping("/list-json-files")
     public ResponseEntity<List<String>> getAllJsonFiles() {
         try {
-            String destinationFolderPath = "C:/Users/Mayer Hedda/Documents/OraForms/Forms2Java/Frontend/forms-frontend/public/json_files/";
+            String destinationFolderPath = "H:\\Forms2Java\\Frontend\\forms-frontend\\public\\json_files";
             File folder = new File(destinationFolderPath);
             File[] files = folder.listFiles((dir, name) -> name.toLowerCase().endsWith(".json"));
 
